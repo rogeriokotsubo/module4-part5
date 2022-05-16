@@ -1,0 +1,131 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  height: 47px;
+  min-width: 700px;
+  align-items: center;
+  font-size: 16px;
+}
+.a-menu {
+  text-decoration: none;
+  padding: 14px;
+  color: white;
+  font-weight: bold;
+  transition: background .3s;
+}
+.a-menu:hover {
+  background-color: #006050;
+}
+/* - ESTILO PARA O RODAPÉ - */
+#footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  width: 100vw;
+  position: static;
+  bottom: 0;
+  margin-top: 10px;
+  height: 50px;
+}
+#footer p {
+  text-align: center;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+    font-family: 'Calibri, Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#exercicio1 {
+  flex: 1;
+  font-family: 'Calibri, Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  text-align:center;
+}
+article p {
+   font-size: 1rem;
+}
+p span {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+#footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: static;
+    bottom: 0;
+    margin-top: 10px;
+    height: 50px;
+}
+.small {
+  font: 12px sans-serif;
+}
+.heavy {
+  font: 16px sans-serif;
+  text-decoration: underline;
+}
+#container-exercicio2 {
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.container-h4 {
+  writing-mode: horizontal-tb;
+  text-align: left;
+}
+.container-horizontal-tb{
+  font-size: 3rem;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  text-align: left;
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
+  writing-mode: horizontal-tb;
+}
+.container-horizontal-tb p{
+  font-size: 2rem;
+}
+.container-vertical-lr{
+  width: 300px;
+  height: 300px;
+  text-align: left;
+  padding: 5px;
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
+  writing-mode: vertical-lr;
+}
+.container-vertical-lr p{
+  font-size: 2rem;
+}
+.container-vertical-rl{
+  width: 300px;
+  height: 300px;
+  text-align: left;
+  padding: 5px;
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
+  writing-mode: vertical-rl;
+}
+.container-vertical-rl p{
+  font-size: 2rem;
+}

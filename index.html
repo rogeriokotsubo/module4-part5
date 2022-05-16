@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>CSS - Estilização de Fontes Parte 1</title>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <header>
+    <nav id="menu">
+        <div>
+          <a class="a-menu" href="./index.html">Exercício 1</a>
+        </div>    
+        <div>
+          <a class="a-menu" href="./exercicio2.html">Exercício 2</a>
+        </div>
+    </nav>
+  </header>
+
+  <!-- CORPO DA PÁGINA -->
+  <main id="exercicio1">
+    <section>
+      <h1>Exercício 1</h1>
+      <br />
+      <article>
+        <p>O terceiro processo seletivo da Alpha EdTech, realizada no início de 2022, contou com a participação de 11
+          mil
+          candidatos e candidatas de todo o país.</p>
+        <p>Foram selecionados e selecionadas 41 <em>Aspirantes</em> a Dev de todas as regiões do Brasil, sendo que
+          metade
+          são da <span>Região Nordeste</span>.</p>
+        <p><span>As <em>Aspirantes</em></span> representam um terço do total de <em>Aspirantes</em> da Turing.</p>
+        <svg viewBox="0 0 600 360" width="600" height="360">
+          <text x="100" y="30" fill="gray" class="heavy">Turma Turing - Distribuição por Região</text>
+          <line x1="70" y1="300" x2="600" y2="300" stroke="gray" />
+          <line x1="70" y1="260" x2="600" y2="260" stroke="gray" />
+          <line x1="70" y1="220" x2="600" y2="220" stroke="gray" />
+          <line x1="70" y1="180" x2="600" y2="180" stroke="gray" />
+          <line x1="70" y1="140" x2="600" y2="140" stroke="gray" />
+          <line x1="70" y1="100" x2="600" y2="100" stroke="gray" />
+          <line x1="70" y1="60" x2="600" y2="60" stroke="gray" />
+          <rect x="106" y="105" width="40" height="195" stroke="green" fill="green" />
+          <rect x="212" y="124" width="40" height="176" stroke="green" fill="green" />
+          <rect x="328" y="292" width="40" height="8" stroke="green" fill="green" />
+          <rect x="444" y="292" width="40" height="8" stroke="green" fill="green" />
+          <rect x="560" y="292" width="40" height="8" stroke="green" fill="green" />
+          <text x="30" y="305" fill="gray" class="small">0 %</text>
+          <text x="30" y="265" fill="gray" class="small">10 %</text>
+          <text x="30" y="225" fill="gray" class="small">20 %</text>
+          <text x="30" y="185" fill="gray" class="small">30 %</text>
+          <text x="30" y="145" fill="gray" class="small">40 %</text>
+          <text x="30" y="105" fill="gray" class="small">50 %</text>
+          <text x="30" y="65" fill="gray" class="small">60 %</text>
+          <text x="102" y="320" fill="gray" class="small">Nordeste</text>
+          <text x="208" y="320" fill="gray" class="small">Sudeste</text>
+          <text x="314" y="320" fill="gray" class="small">Centro Oeste</text>
+          <text x="450" y="320" fill="gray" class="small">Norte</text>
+          <text x="570" y="320" fill="gray" class="small">Sul</text>
+        </svg>
+      </article>
+      <article>
+        <br />
+        <p>A unidade da federação com mais <em>Aspirantes</em> é <span>Pernambuco</span>, com 9 (22%) <em>Aspirantes</em>, seguido do
+          Ceará e São Paulo com 7 (17%).</p>
+        <br />
+        <canvas id="canvas" width="630" height="360"></canvas>
+      </article>
+    </section>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      ctx.strokeStyle = 'gray';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (let y = 50; y < 301; y += 50) {
+        ctx.moveTo(70, y);
+        ctx.lineTo(615, y);
+      }
+      ctx.stroke();
+      ctx.strokeStyle = 'green';
+      ctx.fillStyle = 'green';
+      ctx.fillRect(85, 80, 30, 220);
+      ctx.fillRect(135, 130, 30, 170);
+      ctx.fillRect(185, 130, 30, 170);
+      ctx.fillRect(235, 155, 30, 145);
+      ctx.fillRect(285, 227, 30, 73);
+      ctx.fillRect(335, 227, 30, 73);
+      ctx.fillRect(385, 252, 30, 48);
+      ctx.fillRect(435, 277, 30, 23);
+      ctx.fillRect(485, 277, 30, 23);
+      ctx.fillRect(535, 277, 30, 23);
+      ctx.fillRect(585, 277, 30, 23);
+      ctx.fillStyle = 'gray';
+      ctx.font = '16px sans-serif';
+      ctx.fillText('Turma Turing - Distribuição por Unidade da Federação', 100, 30)
+      ctx.font = '12px sans-serif';
+      for (let i = 0; i < 6; i++) {
+        let valor = (i * 5) + ' %'
+        ctx.fillText(valor, 30, 305 - i * 50)
+      }
+      ctx.fillText('PE', 91, 320)
+      ctx.fillText('CE', 141, 320)
+      ctx.fillText('SP', 191, 320)
+      ctx.fillText('MG', 241, 320)
+      ctx.fillText('RN', 291, 320)
+      ctx.fillText('RJ', 341, 320)
+      ctx.fillText('ES', 391, 320)
+      ctx.fillText('PB', 441, 320)
+      ctx.fillText('RO', 491, 320)
+      ctx.fillText('RS', 541, 320)
+      ctx.fillText('MS', 591, 320)
+    </script>
+  </main>
+
+  <!-- RODAPÉ DA PÁGINA -->
+  <footer id="footer">
+  </footer>
+
+</body>
+
+</html>
